@@ -1,53 +1,7 @@
 <?php
-
-// Conecta com o banco de dados MySQL usando a biblioteca mysqli
-try {
-    $connection = mysqli_connect("localhost", "root", "", "fluffydatabase");
-
-    // Se a conexão foi estabelecida, continue com o restante do código
-    // ...
-
-} catch (mysqli_sql_exception $e) {
-    die("Erro de conexão com o banco de dados: " . $e->getMessage());
-}
-
-
-// Inicializa as variáveis com valores vazios
-$idVet = "";
-$nomeVet = "";
-$crmvVet = "";
-$telefoneVet = "";
-$emailVet = "";
-$senhaVet = "";
-// $especialidadeVet = ""; testar depois
-
-// Se existir um idVet via GET, então o usuário clicou no link Editar da página lista-veterinarios.php
-// Se a tela de cadastro foi acessada via link Editar, então o idVet é enviado via GET
-if (isset($_GET['idVet'])) {
-
-    // Obtém o idVet via GET
-    $idVet = $_GET['idVet'];
-
-    // Monta o comando SQL para recuperar os veterinários cadastrados
-    $sqlVeterinarios = "SELECT * FROM veterinarios WHERE idVet = $idVet";
-
-    // Envia o comando SQL para o MySQL (veterinarios)
-    $resultVeterinarios = mysqli_query($connection, $sqlVeterinarios);
-
-    // Armaneza os dados do vet em um array associativo
-    $row = mysqli_fetch_assoc($resultVeterinarios);
-
-    // Guarda os dados do vet nas variáveis
-    $idVet = $row['idVet'];
-    $nomeVet = $row['nomeVet'];
-    $crmvVet = $row['crmvVet'];
-    $telefoneVet = $row['telefoneVet'];
-    $emailVet = $row['emailVet'];
-    $senhaVet = $row['senhaVet'];
-    // $especialidadeVet = $row['especialidadeVet']; testar depois
-}
-
 ?>
+
+
 
 <!--
 ATIVIDADE SOMATIVA 2
@@ -115,7 +69,7 @@ GRUPO 79
 
                     <form action="recebe-cadastro-vet.php" method="POST">
 
-                        <input type="hidden" name="idVet" value="<?php echo $idVet; ?> " />
+                        <input type="hidden" name="idVet" value="<?php echo $idVet; ?>" />
 
                         <div class="mb-3">
                             <label for="nomeVet" class="form-label">Nome do Vet</label>

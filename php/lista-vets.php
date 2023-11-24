@@ -56,57 +56,23 @@ GRUPO 79
         <div class="row">
             <div class="col-md-6">
                 <div class="text-container">
-                    <h1 class="titulo-principal">Lista de Tutores Fluffy</h1>
+                    <h1 class="titulo-principal">Lista de Veterinários Fluffy</h1>
                     <p class="texto-principal">Confira abaixo a lista de todos os tutores cadastrados no Fluffy.
                         Aqui você encontrará informações sobre cada tutor(a) e seu pet. Caso queira editar ou excluir algum cadastro, clique nos links correspondentes.
                     </p>
 
-                    <!-- Aqui vai ficar a tabela listando os tutores -->
+                    <!-- Aqui vai ficar a tabela listando os veterinários -->
                     <div class="container mt-5">
                         <h2>Fluffers</h2>
                         <table class="table table-hover">
                             <tr>
                                 <td class="table-warning">Id</td>
                                 <td class="table-warning">Nome</td>
-                                <td class="table-warning">CPF</td>
+                                <td class="table-warning">CRMV</td>
                                 <td class="table-warning">-</td>
                                 <td class="table-warning">-</td>
                             </tr>
                             <?php
-
-                            // Conecta com o banco de dados MySQL usando a biblioteca mysqli
-                            try {
-                                $connection = mysqli_connect("localhost", "root", "", "fluffydatabase");
-
-                                // Se a conexão foi estabelecida, continue com o restante do código
-                                // ...
-
-                            } catch (mysqli_sql_exception $e) {
-                                die("Erro de conexão com o banco de dados: " . $e->getMessage());
-                            }
-
-                            // Monta o comando SQL para recuperar os veterinários cadastrados
-                            $sqlVets = "SELECT idVet, nomeVet, crmvVet FROM veterinarios";
-
-                            // Envia o comando SQL para o MySQL (veterinários)
-                            $resultVets = mysqli_query($connection, $sqlVets);
-
-                            // Verifica se o comando foi executado com sucesso
-                            if ($resultVets) {
-
-                                // Loop para exibir as linhas selecionadas
-                                while ($row = mysqli_fetch_assoc($resultVets)) {
-
-                                    // Concatatena as linhas selecionadas em uma string
-                                    echo " <tr>
-                                                <td>" . $row["idVet"] . "</td>
-                                                <td>" . $row["nomeVet"] . "</td>
-                                                <td>" . $row["crmvVet"] . "</td>
-                                                <td><a href='cadastro-veterinario.php?id=" . $row["idVet"] . "'>Editar</a></td>
-                                                <td><a href='excluir-veterinario.php?id=" . $row["idVet"] . "'>Excluir</a></td>
-                                            </tr>";
-                                }
-                            }
 
                             ?>
                         </table>
