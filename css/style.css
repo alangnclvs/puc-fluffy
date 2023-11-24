@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,100&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap');
+
+/* A cor laranja que estou usando nas ilustrações é #e36414 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    padding-bottom: 60px;
+}
+
+/* Estiliza o container-fluid, que é o container do header de todas as páginas */
+.container-fluid {
+    padding: 40px;
+    margin: 0px 60px;
+}
+
+/* Estiliza o menu do header de todas as páginas */
+/* Estiliza o FLUFFY do header de todas as páginas */
+.navbar-brand {
+    font-size: 24px;
+    margin-left: 0px;
+}
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item,
+nav-item dropdown {
+    font-size: 18px;
+    margin-left: 20px;
+
+}
+
+/* Estiliza o titulo e o texto principal da página */
+.titulo-principal {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.texto-principal {
+    line-height: 1.8;
+}
+
+img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Define os estilos do footer para todas as páginas */
+a,
+li {
+    list-style: none;
+    text-decoration: none;
+    color: grey;
+}
+
+footer {
+    background-color: --white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Estiliza o texto principal */
+.row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    font-family: arial;
+    font-weight: 100;
+
+}
+
+
+/* Estiliza o link para Sobre,Blog e Apps do footer */
+.footer-nav {
+    display: flex;
+    justify-content: left;
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+
+.footer-nav li {
+    margin: 5px 15px 5px 2px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* Estiliza os ícones para redes sociais do footer */
+.social-links {
+    display: flex;
+    justify-content: right;
+    margin: 0 auto;
+    padding-right: 100px;
+}
+
+.social-links li {
+    margin: 5px 15px 5px 2px;
+
+}
+
+
+/* Estiliza o copyrigth do footer de todas as páginas */
+.copyright {
+    display: flex;
+    justify-content: center;
+    color: grey;
+    font-size: 12px;
+    font-family: arial;
+}
