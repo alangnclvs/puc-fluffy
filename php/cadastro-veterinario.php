@@ -1,4 +1,45 @@
 <?php
+// Conecta com o banco de dados MySQL usando a biblioteca mysqli
+try {
+    $connection = mysqli_connect("localhost", "root", "", "fluffydatabase");
+
+    // Se a conexão foi estabelecida, continue com o restante do código
+    // ...
+
+} catch (mysqli_sql_exception $e) {
+    die("Erro de conexão com o banco de dados: " . $e->getMessage());
+}
+
+$idVet = "";
+$nomeVet = "";
+$crmvVet = "";
+$telefoneVet = "";
+$emailVet = "";
+$senhaVet = "";
+
+
+if (isset($_GET['idVet'])) {
+
+
+    $idVet = $_GET['idVet'];
+
+    // Monta o comando SQL para recuperar os veterinários cadastrados
+    $sqlVets = "SELECT * FROM veterinarios WHERE idVet = $idVet";
+
+    // Envia o comando SQL para o MySQL (veterinários)
+    $resultVets = mysqli_query($connection, $sqlVets);
+
+    // Verifica se o comando foi executado com sucesso
+    $row = mysqli_fetch_assoc($resultVets);
+
+
+    $nomeVet = $row['nomeVet'];
+    $crmvVet = $row['crmvVet'];
+    $telefoneVet = $row['telefoneVet'];
+    $emailVet = $row['emailVet'];
+    $senhaVet = $row['senhaVet'];
+}
+
 ?>
 
 

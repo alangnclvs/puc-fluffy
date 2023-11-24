@@ -21,4 +21,4 @@ $sqlTutores = "DELETE FROM tutores WHERE idTutor = $idTutor";
 $resultTutores = mysqli_query($connection, $sqlTutores);
 
 // Redireciona para a página lista-tutores.php
-echo header("Location: lista-tutores.php");
+header("Location: lista-tutores.php");

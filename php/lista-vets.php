@@ -72,7 +72,43 @@ GRUPO 79
                                 <td class="table-warning">-</td>
                                 <td class="table-warning">-</td>
                             </tr>
+
                             <?php
+                            // AQUI ESTA TUDO FUNCIONANDO, RECEBE A LISTAGEM PERFEITAMENTE
+
+                            // Conecta com o banco de dados MySQL usando a biblioteca mysqli
+                            try {
+                                $connection = mysqli_connect("localhost", "root", "", "fluffydatabase");
+
+                                // Se a conexão foi estabelecida, continue com o restante do código
+                                // ...
+
+                            } catch (mysqli_sql_exception $e) {
+                                die("Erro de conexão com o banco de dados: " . $e->getMessage());
+                            }
+
+                            // Monta o comando SQL para recuperar os veterinários cadastrados
+                            $sqlVets = "SELECT idVet, nomeVet, crmvVet FROM veterinarios";
+
+                            // Envia o comando SQL para o MySQL (veterinários)
+                            $resultVets = mysqli_query($connection, $sqlVets);
+
+                            // Verifica se o comando foi executado com sucesso
+                            if ($resultVets) {
+
+                                // Loop para exibir as linhas selecionadas
+                                while ($row = mysqli_fetch_assoc($resultVets)) {
+
+                                    // Concatatena as linhas selecionadas em uma string
+                                    echo " <tr>
+                                                <td>" . $row["idVet"] . "</td>
+                                                <td>" . $row["nomeVet"] . "</td>
+                                                <td>" . $row["crmvVet"] . "</td>
+                                                <td><a href='cadastro-veterinario.php?idVet=" . $row["idVet"] . "'>Editar</a></td>
+                                                <td><a href='excluir-veterinario.php?idVet=" . $row["idVet"] . "'>Excluir</a></td>
+                                            </tr>";
+                                }
+                            }
 
                             ?>
                         </table>
