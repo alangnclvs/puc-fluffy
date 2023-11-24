@@ -1,54 +1,3 @@
-<?php
-
-// Conecta com o banco de dados MySQL usando a biblioteca mysqli
-try {
-    $connection = mysqli_connect("localhost", "root", "", "fluffydatabase");
-
-    // Se a conexão foi estabelecida, continue com o restante do código
-    // ...
-
-} catch (mysqli_sql_exception $e) {
-    die("Erro de conexão com o banco de dados: " . $e->getMessage());
-}
-
-
-// Inicializa as variáveis com valores vazios
-$idVet = "";
-$nomeVet = "";
-$crmvVet = "";
-$telefoneVet = "";
-$emailVet = "";
-$senhaVet = "";
-// $especialidadeVet = ""; testar depois
-
-// Se existir um idVet via GET, então o usuário clicou no link Editar da página lista-veterinarios.php
-// Se a tela de cadastro foi acessada via link Editar, então o idVet é enviado via GET
-if (isset($_GET['idVet'])) {
-
-    // Obtém o idVet via GET
-    $idVet = $_GET['idVet'];
-
-    // Monta o comando SQL para recuperar os veterinários cadastrados
-    $sqlVeterinarios = "SELECT * FROM veterinarios WHERE idVet = $idVet";
-
-    // Envia o comando SQL para o MySQL (veterinarios)
-    $resultVeterinarios = mysqli_query($connection, $sqlVeterinarios);
-
-    // Armaneza os dados do vet em um array associativo
-    $row = mysqli_fetch_assoc($resultVeterinarios);
-
-    // Guarda os dados do vet nas variáveis
-    $idVet = $row['idVet'];
-    $nomeVet = $row['nomeVet'];
-    $crmvVet = $row['crmvVet'];
-    $telefoneVet = $row['telefoneVet'];
-    $emailVet = $row['emailVet'];
-    $senhaVet = $row['senhaVet'];
-    // $especialidadeVet = $row['especialidadeVet']; testar depois
-}
-
-?>
-
 <!--
 ATIVIDADE SOMATIVA 2
 ALAN GONÇALVES
@@ -92,7 +41,7 @@ GRUPO 79
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="cadastro-tutor.php">Tutor(a)</a></li>
-                            <li><a class="dropdown-item" href="cadastro-veterinario.html">Veterinário(a)</a></li>
+                            <li><a class="dropdown-item" href="cadastro-veterinario.php">Veterinário(a)</a></li>
                         </ul>
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
@@ -107,50 +56,65 @@ GRUPO 79
         <div class="row">
             <div class="col-md-6">
                 <div class="text-container">
-                    <h1 class="titulo-principal">Seja um Veterinário Fluffy</h1>
-                    <p class="texto-principal">Preencha o formulário abaixo para se cadastrar como veterinário(a),
-                        compartilhar informações sobre os animais atendidos e obter acesso a todas as funcionalidades do
-                        Fluffy.
+                    <h1 class="titulo-principal">Lista de Tutores Fluffy</h1>
+                    <p class="texto-principal">Confira abaixo a lista de todos os tutores cadastrados no Fluffy.
+                        Aqui você encontrará informações sobre cada tutor(a) e seu pet. Caso queira editar ou excluir algum cadastro, clique nos links correspondentes.
                     </p>
 
-                    <form action="recebe-cadastro-vet.php" method="POST">
+                    <!-- Aqui vai ficar a tabela listando os tutores -->
+                    <div class="container mt-5">
+                        <h2>Fluffers</h2>
+                        <table class="table table-hover">
+                            <tr>
+                                <td class="table-warning">Id</td>
+                                <td class="table-warning">Nome</td>
+                                <td class="table-warning">CPF</td>
+                                <td class="table-warning">-</td>
+                                <td class="table-warning">-</td>
+                            </tr>
+                            <?php
 
-                        <input type="hidden" name="idVet" value="<?php echo $idVet; ?> " />
+                            // Conecta com o banco de dados MySQL usando a biblioteca mysqli
+                            try {
+                                $connection = mysqli_connect("localhost", "root", "", "fluffydatabase");
 
-                        <div class="mb-3">
-                            <label for="nomeVet" class="form-label">Nome do Vet</label>
-                            <input type="text" class="form-control" name="nomeVet" id="nomeVet" value="<?php echo $nomeVet; ?>" />
-                        </div>
+                                // Se a conexão foi estabelecida, continue com o restante do código
+                                // ...
 
-                        <div class="mb-3">
-                            <label for="crmvVet" class="form-label">CRMV</label>
-                            <input type="text" class="form-control" name="crmvVet" id="crmvVet" value="<?php echo $crmvVet; ?>" />
-                        </div>
+                            } catch (mysqli_sql_exception $e) {
+                                die("Erro de conexão com o banco de dados: " . $e->getMessage());
+                            }
 
-                        <div class="mb-3">
-                            <label for="telefoneVet" class="form-label">Telefone</label>
-                            <input type="tel" class="form-control" name="telefoneVet" id="telefoneVet" value="<?php echo $telefoneVet; ?>" />
-                        </div>
+                            // Monta o comando SQL para recuperar os tutores cadastrados
+                            $sqlTutores = "SELECT idTutor, nomeTutor, cpfTutor FROM tutores";
 
-                        <div class="mb-3">
-                            <label for="emailVet" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" name="emailVet" id="emailVet" value="<?php echo $emailVet; ?>" />
-                        </div>
+                            // Envia o comando SQL para o MySQL (tutores)
+                            $resultTutores = mysqli_query($connection, $sqlTutores);
 
-                        <div class="mb-3">
-                            <label for="senhaVet" class="form-label">Senha</label>
-                            <input type="password" class="form-control" name="senhaVet" id="senhaVet" value="<?php echo $senhaVet; ?>" />
-                        </div>
+                            // Verifica se o comando foi executado com sucesso
+                            if ($resultTutores) {
 
+                                // Loop para exibir as linhas selecionadas
+                                while ($row = mysqli_fetch_assoc($resultTutores)) {
 
-                        <button type="submit" class="btn btn-dark">Enviar</button>
+                                    // Concatena as linhas selecionadas em uma string
+                                    echo " <tr>
+                                                <td>" . $row['idTutor'] . "</td>
+                                                <td>" . $row['nomeTutor'] . "</td>
+                                                <td>" . $row['cpfTutor'] . "</td>
+                                                <td><a href='cadastro-tutor.php?idTutor=" . $row['idTutor'] . "'>Editar</a></td>
+                                                <td><a href='exclui-tutores.php?idTutor=" . $row['idTutor'] . "'>Excluir</a></td>
+                                            </tr>";
+                                }
+                            }
 
-                    </form>
-
+                            ?>
+                        </table>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="../img/form-vet.png" alt="Ilustração de um veterinário com um cachorro">
+                <img src="../img/lista-tutores.png" alt="Ilustração de um veterinário com um cachorro">
             </div>
         </div>
     </div>
@@ -168,8 +132,11 @@ GRUPO 79
 
     <!-- Import JavaScript bootstrap -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Import Font Awesome -->
+    <script src="https://kit.fontawesome.com/9c668c8ddc.js" crossorigin="anonymous"></script>
+
 </body>
-<script src="https://kit.fontawesome.com/9c668c8ddc.js" crossorigin="anonymous"></script>
 <footer>
     <div class="row">
         <div class="col span-1-of-2">
