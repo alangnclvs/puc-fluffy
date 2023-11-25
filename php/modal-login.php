@@ -1,4 +1,9 @@
-<!-- Modal de Login -->
+<!-- 
+ATIVIDADE SOMATIVA 2
+ALAN GONÇALVES
+GRUPO 79 
+-->
+
 <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">

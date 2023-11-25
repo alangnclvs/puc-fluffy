@@ -1,15 +1,13 @@
+<!-- 
+ATIVIDADE SOMATIVA 2
+ALAN GONÇALVES
+GRUPO 79 
+-->
+
 <?php
 
-// Abre conexão com o banco de dados
-try {
-    $connection = mysqli_connect("localhost", "root", "", "fluffydatabase");
-
-    // Se a conexão foi estabelecida, continue com o restante do código
-    // ...
-
-} catch (mysqli_sql_exception $e) {
-    die("Erro de conexão com o banco de dados: " . $e->getMessage());
-}
+// Conecta com o banco de dados MySQL usando o include do arquivo conecta.php
+include "../includes/conecta.php";
 
 $idVet = $_POST['idVet'];
 $nomeVet = $_POST['nomeVet'];
