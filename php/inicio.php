@@ -4,6 +4,8 @@ ALAN GONÇALVES
 GRUPO 79 
 -->
 
+<?php require "../includes/autentica.php"; ?>
+
 <?php include "../includes/topo.php"; ?>
 
 <body>
@@ -25,20 +27,10 @@ GRUPO 79
                         Usuário ou senha inválidos! Tente novamente ou cadastre-se.
                       </div>';
                     }
-
-                    if (isset($_GET['autentica'])) {
-                        echo '<div class="alert alert-danger" role="alert">
-                        Você precisa estar logado para acessar esta página.
-                      </div>';
-                    }
-
                     ?>
 
-                    <h1 class="titulo-principal">Gestão para Clínicas Veterinárias</h1>
-                    <p class="texto-principal">Na Fluffy, registrar veterinários e tutores é simples e eficiente.
-                        Organize informações de tutores e veterinários de forma intuitiva, simplificando a gestão da sua
-                        clínica. Acesse a Fluffy de qualquer lugar e descubra uma maneira inovadora de cuidar dos
-                        animais. Junte-se a nós e leve sua clínica para novos patamares.</p>
+                    <h1 class="titulo-principal">Bem-vindo <?php echo $_SESSION['nome']; ?></h1>
+                    <p class="texto-principal">Você faz parte da comunidade Fluffy! Estamos felizes em tê-lo conosco. Explore e aproveite as funcionalidades para simplificar a gestão da sua clínica e cuidar dos animais de forma inovadora. Se precisar de alguma ajuda, estamos aqui para você.</p>
                     <a href="about.html" class="btn btn-light">Saiba mais</a>
                 </div>
             </div>

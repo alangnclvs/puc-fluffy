@@ -30,6 +30,15 @@ GRUPO 79
                         <li><a class="dropdown-item" href="cadastro-veterinario.php">Veterinário(a)</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Área do usuário
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="lista-tutores.php">Lista de Tutores(a)</a></li>
+                        <li><a class="dropdown-item" href="lista-vets.php">Lista de veterinários(a)</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.php">Login</a>
                 </li>

@@ -18,8 +18,25 @@ $resultadoVets = mysqli_query($connection, $sqlVets);
 $quantidadeRegistrosTutores = mysqli_num_rows($resultadoTutores);
 $quantidadeRegistrosVets = mysqli_num_rows($resultadoVets);
 
-// Se o número de linhas for igual a 1, o usuário existe no banco de dados
+// Se o número de linhas for maior que 0 em qualquer uma das tabelas, o usuário existe no banco de dados
 if ($quantidadeRegistrosTutores > 0 || $quantidadeRegistrosVets > 0) {
+
+    // Inicia a sessão
+    session_start();
+
+    // Verifica em qual consulta o usuário foi encontrado
+    if ($quantidadeRegistrosTutores > 0) {
+        // Se encontrado na tabela tutores, obtém os dados e armazena na sessão
+        $rowTutores = mysqli_fetch_assoc($resultadoTutores);
+        $_SESSION['id'] = $rowTutores['idTutor'];
+        $_SESSION['nome'] = $rowTutores['nomeTutor'];
+    } elseif ($quantidadeRegistrosVets > 0) {
+        // Se encontrado na tabela veterinarios, obtém os dados e armazena na sessão
+        $rowVets = mysqli_fetch_assoc($resultadoVets);
+        $_SESSION['id'] = $rowVets['idVet'];
+        $_SESSION['nome'] = $rowVets['nomeVet'];
+    }
+
     header("Location: inicio.php");
 } else {
     header("Location: index.php?erro=1");

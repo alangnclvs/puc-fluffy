@@ -4,6 +4,8 @@ ALAN GONÇALVES
 GRUPO 79
 -->
 
+<?php require "../includes/autentica.php"; ?>
+
 <?php include "../includes/topo.php"; ?>
 
 <body>
