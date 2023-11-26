@@ -50,7 +50,7 @@ GRUPO 79
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="../img/form-tutor.png" alt="Ilustração de um veterinário com um cachorro">
+                <img src="../img/login.png" alt="Um cachorro acenando">
             </div>
         </div>
     </div>

@@ -39,7 +39,6 @@ GRUPO 79
                         Organize informações de tutores e veterinários de forma intuitiva, simplificando a gestão da sua
                         clínica. Acesse a Fluffy de qualquer lugar e descubra uma maneira inovadora de cuidar dos
                         animais. Junte-se a nós e leve sua clínica para novos patamares.</p>
-                    <a href="about.html" class="btn btn-light">Saiba mais</a>
                 </div>
             </div>
             <div class="col-md-6">

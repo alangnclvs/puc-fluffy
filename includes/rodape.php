@@ -8,7 +8,6 @@ GRUPO 79
     <div class="row">
         <div class="col span-1-of-2">
             <ul class="footer-nav">
-                <li><a href="about.html">Sobre</a></li>
                 <li><a href="https://www.apple.com/app-store/" target="_blank">iOS App</a></li>
                 <li><a href="https://play.google.com/store/games?hl=en&gl=US" target="_blank">Android App</a></li>
             </ul>

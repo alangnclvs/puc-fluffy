@@ -65,27 +65,27 @@ if (isset($_GET['idVet'])) {
 
                         <div class="mb-3">
                             <label for="nomeVet" class="form-label">Nome do Vet</label>
-                            <input type="text" class="form-control" name="nomeVet" id="nomeVet" value="<?php echo $nomeVet; ?>" />
+                            <input type="text" class="form-control" name="nomeVet" id="nomeVet" value="<?php echo $nomeVet; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="crmvVet" class="form-label">CRMV</label>
-                            <input type="text" class="form-control" name="crmvVet" id="crmvVet" value="<?php echo $crmvVet; ?>" />
+                            <input type="number" class="form-control" name="crmvVet" id="crmvVet" value="<?php echo $crmvVet; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="telefoneVet" class="form-label">Telefone</label>
-                            <input type="tel" class="form-control" name="telefoneVet" id="telefoneVet" value="<?php echo $telefoneVet; ?>" />
+                            <input type="tel" class="form-control" name="telefoneVet" id="telefoneVet" value="<?php echo $telefoneVet; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="emailVet" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" name="emailVet" id="emailVet" value="<?php echo $emailVet; ?>" />
+                            <input type="email" class="form-control" name="emailVet" id="emailVet" value="<?php echo $emailVet; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="senhaVet" class="form-label">Senha</label>
-                            <input type="password" class="form-control" name="senhaVet" id="senhaVet" value="<?php echo $senhaVet; ?>" />
+                            <input type="password" class="form-control" name="senhaVet" id="senhaVet" value="<?php echo $senhaVet; ?>" required />
                         </div>
 
 

@@ -30,8 +30,9 @@ GRUPO 79
                     ?>
 
                     <h1 class="titulo-principal">Lista de Veterinários Fluffy</h1>
-                    <p class="texto-principal">Confira abaixo a lista de todos os tutores cadastrados no Fluffy.
-                        Aqui você encontrará informações sobre cada tutor(a) e seu pet. Caso queira editar ou excluir algum cadastro, clique nos links correspondentes.
+                    <p class="texto-principal">Confira abaixo a lista de todos os veterinários cadastrados no Fluffy.
+                        Aqui você encontrará informações sobre cada profissional e seus atendimentos. Caso deseje editar ou excluir algum cadastro, clique nos links correspondentes.
+
                     </p>
 
                     <!-- Aqui vai ficar a tabela listando os veterinários -->

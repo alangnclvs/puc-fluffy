@@ -74,47 +74,47 @@ if (isset($_GET['idTutor'])) {
 
                         <div class="mb-3">
                             <label for="nomeTutor" class="form-label">Nome do Tutor</label>
-                            <input type="text" class="form-control" name="nomeTutor" id="nomeTutor" value="<?php echo $nomeTutor; ?>" />
+                            <input type="text" class="form-control" name="nomeTutor" id="nomeTutor" value="<?php echo $nomeTutor; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="cpfTutor" class="form-label">CPF</label>
-                            <input type="text" class="form-control" name="cpfTutor" id="cpfTutor" value="<?php echo $cpfTutor; ?>" />
+                            <input type="number" class="form-control" name="cpfTutor" id="cpfTutor" value="<?php echo $cpfTutor; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="telefoneTutor" class="form-label">Telefone</label>
-                            <input type="tel" class="form-control" name="telefoneTutor" id="telefoneTutor" value="<?php echo $telefoneTutor; ?>" />
+                            <input type="tel" class="form-control" name="telefoneTutor" id="telefoneTutor" value="<?php echo $telefoneTutor; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="emailTutor" class="form-label">E-mail</label>
-                            <input type="email" class="form-control" name="emailTutor" id="emailTutor" value="<?php echo $emailTutor; ?>" />
+                            <input type="email" class="form-control" name="emailTutor" id="emailTutor" value="<?php echo $emailTutor; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="senhaTutor" class="form-label">Senha</label>
-                            <input type="password" class="form-control" name="senhaTutor" id="senhaTutor" value="<?php echo $senhaTutor; ?>" />
+                            <input type="password" class="form-control" name="senhaTutor" id="senhaTutor" value="<?php echo $senhaTutor; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="nomePet" class="form-label">Nome do Pet</label>
-                            <input type="text" class="form-control" name="nomePet" id="nomePet" value="<?php echo $nomePet; ?>" />
+                            <input type="text" class="form-control" name="nomePet" id="nomePet" value="<?php echo $nomePet; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="especiePet" class="form-label">Espécie</label>
-                            <input type="text" class="form-control" name="especiePet" id="especiePet" value="<?php echo $especiePet; ?>" />
+                            <input type="text" class="form-control" name="especiePet" id="especiePet" value="<?php echo $especiePet; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="racaPet" class="form-label">Raça</label>
-                            <input type="text" class="form-control" name="racaPet" id="racaPet" value="<?php echo $racaPet; ?>" />
+                            <input type="text" class="form-control" name="racaPet" id="racaPet" value="<?php echo $racaPet; ?>" required />
                         </div>
 
                         <div class="mb-3">
                             <label for="datanascimentoPet" class="form-label">Data de Nascimento do Pet</label>
-                            <input type="date" class="form-control" name="datanascimentoPet" id="datanascimentoPet" value="<?php echo $datanascimentoPet; ?>" />
+                            <input type="date" class="form-control" name="datanascimentoPet" id="datanascimentoPet" value="<?php echo $datanascimentoPet; ?>" required />
                         </div>
 
 
