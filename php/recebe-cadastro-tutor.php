@@ -10,6 +10,7 @@ GRUPO 79
 include "../includes/conecta.php";
 
 $idTutor = isset($_POST['idTutor']) ? $_POST['idTutor'] : '';
+$nomeTutor = $_POST['nomeTutor'];
 $cpfTutor = $_POST['cpfTutor'];
 $telefoneTutor = $_POST['telefoneTutor'];
 $emailTutor = $_POST['emailTutor'];

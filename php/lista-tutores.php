@@ -40,8 +40,8 @@ GRUPO 79
                                 <td class="table-warning">Id</td>
                                 <td class="table-warning">Nome</td>
                                 <td class="table-warning">CPF</td>
-                                <td class="table-warning">-</td>
-                                <td class="table-warning">-</td>
+                                <td class="table-warning">Editar</td>
+                                <td class="table-warning">Excluir</td>
                             </tr>
                             <?php
 

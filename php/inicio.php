@@ -27,7 +27,7 @@ GRUPO 79
                     }
                     ?>
 
-                    <h1 class="titulo-principal">Olá <?php echo $_SESSION['nome']; ?></h1>
+                    <h1 class="titulo-principal">Olá, <?php echo $_SESSION['nome']; ?></h1>
                     <p class="texto-principal">Você faz parte da comunidade Fluffy! Estamos felizes em tê-lo conosco. Explore e aproveite as funcionalidades para simplificar a gestão da sua clínica e cuidar dos animais de forma inovadora. Se precisar de alguma ajuda, estamos aqui para você.</p>
                     <a href="about.html" class="btn btn-light">Saiba mais</a>
                 </div>
