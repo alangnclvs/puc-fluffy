@@ -4,8 +4,8 @@ ALAN GONÇALVES
 GRUPO 79 
 -->
 
+<!--  Página de cadastro do tutor -->
 <?php
-
 // Conecta com o banco de dados MySQL usando o include do arquivo conecta.php
 include "../includes/conecta.php";
 
@@ -54,7 +54,6 @@ if (isset($_GET['idTutor'])) {
 
 <?php include "../includes/topo.php"; ?>
 
-
 <body>
 
     <?php include "../includes/menudeslogado.php"; ?>
@@ -79,7 +78,7 @@ if (isset($_GET['idTutor'])) {
 
                         <div class="mb-3">
                             <label for="cpfTutor" class="form-label">CPF</label>
-                            <input type="number" class="form-control" name="cpfTutor" id="cpfTutor" value="<?php echo $cpfTutor; ?>" required />
+                            <input type="text" class="form-control" name="cpfTutor" id="cpfTutor" value="<?php echo $cpfTutor; ?>" required />
                         </div>
 
                         <div class="mb-3">
@@ -117,22 +116,22 @@ if (isset($_GET['idTutor'])) {
                             <input type="date" class="form-control" name="datanascimentoPet" id="datanascimentoPet" value="<?php echo $datanascimentoPet; ?>" required />
                         </div>
 
-
                         <button type="submit" class="btn btn-dark">Enviar</button>
 
                     </form>
-
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="../img/form-tutor.png" alt="Ilustração de um veterinário com um cachorro">
+                <img src="../img/form-tutor.png" alt="Ilustração de uma tutora com um cachorro">
             </div>
         </div>
     </div>
 
     <!-- Import JavaScript bootstrap -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/9c668c8ddc.js" crossorigin="anonymous"></script>
+
 </body>
-<script src="https://kit.fontawesome.com/9c668c8ddc.js" crossorigin="anonymous"></script>
 
 <?php include "../includes/rodape.php"; ?>

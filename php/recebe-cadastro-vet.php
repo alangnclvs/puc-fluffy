@@ -41,8 +41,8 @@ if (empty($idVet)) {
     $resultVets = mysqli_query($connection, $sqlVets);
 
     if ($resultVets) {
-        echo header("Location: lista-vets.php?sucess=1");
+        header("Location: lista-vets.php?sucess=1");
     } else {
-        echo "Erro ao atualizar. Tente novamente mais tarde.";
+        header("Location: index.php?erro=1");
     }
 }

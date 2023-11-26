@@ -10,9 +10,7 @@ GRUPO 79
 try {
     $connection = mysqli_connect("localhost", "root", "", "fluffydatabase");
 
-    // Se a conexão foi estabelecida, continue com o restante do código
-    // ...
-
+    // Caso algo tenha dado errado, exibe uma mensagem de erro
 } catch (mysqli_sql_exception $e) {
     die("Erro de conexão com o banco de dados: " . $e->getMessage());
 }

@@ -4,6 +4,7 @@ ALAN GONÇALVES
 GRUPO 79 
 -->
 
+<!-- Rodapé para todas as páginas -->
 <footer>
     <div class="row">
         <div class="col span-1-of-2">

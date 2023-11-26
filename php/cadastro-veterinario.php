@@ -4,10 +4,12 @@ ALAN GONÇALVES
 GRUPO 79 
 -->
 
+<!--  Página de cadastro do veterinário -->
 <?php
 // Conecta com o banco de dados MySQL usando o include do arquivo conecta.php
 include "../includes/conecta.php";
 
+// Inicializa as variáveis com valores vazios
 $idVet = "";
 $nomeVet = "";
 $crmvVet = "";
@@ -15,10 +17,11 @@ $telefoneVet = "";
 $emailVet = "";
 $senhaVet = "";
 
-
+// Se existir um idVet via GET, então o usuário clicou no link Editar da página lista-vets.php
+// Se a tela de cadastro foi acessada via link Editar, então o idVet é enviado via GET
 if (isset($_GET['idVet'])) {
 
-
+    // Obtém o idVet via GET
     $idVet = $_GET['idVet'];
 
     // Monta o comando SQL para recuperar os veterinários cadastrados
@@ -27,10 +30,10 @@ if (isset($_GET['idVet'])) {
     // Envia o comando SQL para o MySQL (veterinários)
     $resultVets = mysqli_query($connection, $sqlVets);
 
-    // Verifica se o comando foi executado com sucesso
+    // Armaneza os dados do veterinário em um array associativo
     $row = mysqli_fetch_assoc($resultVets);
 
-
+    // Guarda os dados do veterinário nas variáveis
     $nomeVet = $row['nomeVet'];
     $crmvVet = $row['crmvVet'];
     $telefoneVet = $row['telefoneVet'];
@@ -42,13 +45,10 @@ if (isset($_GET['idVet'])) {
 
 <?php include "../includes/topo.php"; ?>
 
-
 <body>
 
     <?php include "../includes/menudeslogado.php"; ?>
 
-    <!-- Layout -->
-    <!-- Um container com duas colunas, uma com um texto e outra com uma imagem -->
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -70,7 +70,7 @@ if (isset($_GET['idVet'])) {
 
                         <div class="mb-3">
                             <label for="crmvVet" class="form-label">CRMV</label>
-                            <input type="number" class="form-control" name="crmvVet" id="crmvVet" value="<?php echo $crmvVet; ?>" required />
+                            <input type="text" class="form-control" name="crmvVet" id="crmvVet" value="<?php echo $crmvVet; ?>" required />
                         </div>
 
                         <div class="mb-3">
@@ -88,11 +88,9 @@ if (isset($_GET['idVet'])) {
                             <input type="password" class="form-control" name="senhaVet" id="senhaVet" value="<?php echo $senhaVet; ?>" required />
                         </div>
 
-
                         <button type="submit" class="btn btn-dark">Enviar</button>
 
                     </form>
-
                 </div>
             </div>
             <div class="col-md-6">
@@ -101,10 +99,11 @@ if (isset($_GET['idVet'])) {
         </div>
     </div>
 
-
     <!-- Import JavaScript bootstrap -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/9c668c8ddc.js" crossorigin="anonymous"></script>
+
 </body>
-<script src="https://kit.fontawesome.com/9c668c8ddc.js" crossorigin="anonymous"></script>
 
 <?php include "../includes/rodape.php"; ?>

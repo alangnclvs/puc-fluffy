@@ -4,8 +4,9 @@ ALAN GONÇALVES
 GRUPO 79
 -->
 
-<?php //require "../includes/autentica.php"; 
-?>
+
+<!-- Página que lista os tutores cadastrados -->
+<?php require "../includes/autentica.php"; ?>
 
 <?php include "../includes/topo.php"; ?>
 
@@ -13,8 +14,6 @@ GRUPO 79
 
     <?php include "../includes/menulogado.php"; ?>
 
-    <!-- Layout -->
-    <!-- Um container com duas colunas, uma com um texto e outra com uma imagem -->
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -34,7 +33,6 @@ GRUPO 79
                         Aqui você encontrará informações sobre cada tutor(a) e seu pet. Caso queira editar ou excluir algum cadastro, clique nos links correspondentes.
                     </p>
 
-                    <!-- Aqui vai ficar a tabela listando os tutores -->
                     <div class="container mt-5">
                         <h2>Fluffers</h2>
                         <table class="table table-hover">
@@ -79,7 +77,7 @@ GRUPO 79
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="../img/lista-tutores.png" alt="Ilustração de um veterinário com um cachorro">
+                <img src="../img/lista-tutores.png" alt="Ilustração de uma tutora com um cachorro">
             </div>
         </div>
     </div>
@@ -87,7 +85,6 @@ GRUPO 79
     <!-- Import JavaScript bootstrap -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    <!-- Import Font Awesome -->
     <script src="https://kit.fontawesome.com/9c668c8ddc.js" crossorigin="anonymous"></script>
 
 </body>

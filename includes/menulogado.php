@@ -4,6 +4,7 @@ ALAN GONÇALVES
 GRUPO 79 
 -->
 
+<!-- Menu de navegação para usuários logados -->
 <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">FLUFFY</a>

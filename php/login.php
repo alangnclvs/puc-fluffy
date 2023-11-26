@@ -4,12 +4,12 @@ ALAN GONÇALVES
 GRUPO 79 
 -->
 
+<!-- Página de login -->
 <?php include "../includes/topo.php"; ?>
-
 
 <body>
 
-    <?php include "../includes/menu.php"; ?>
+    <?php include "../includes/menudeslogado.php"; ?>
 
     <div class="container">
         <div class="row">
@@ -46,7 +46,6 @@ GRUPO 79
                         <button type="submit" class="btn btn-dark">Enviar</button>
 
                     </form>
-
                 </div>
             </div>
             <div class="col-md-6">
@@ -57,7 +56,9 @@ GRUPO 79
 
     <!-- Import JavaScript bootstrap -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/9c668c8ddc.js" crossorigin="anonymous"></script>
+
 </body>
-<script src="https://kit.fontawesome.com/9c668c8ddc.js" crossorigin="anonymous"></script>
 
 <?php include "../includes/rodape.php"; ?>

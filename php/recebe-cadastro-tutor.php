@@ -9,8 +9,7 @@ GRUPO 79
 // Conecta com o banco de dados MySQL usando o include do arquivo conecta.php
 include "../includes/conecta.php";
 
-$idTutor = isset($_POST['idTutor']) ? $_POST['idTutor'] : ''; // Importante para o update, senão cria um novo registro
-$nomeTutor = $_POST['nomeTutor'];
+$idTutor = isset($_POST['idTutor']) ? $_POST['idTutor'] : '';
 $cpfTutor = $_POST['cpfTutor'];
 $telefoneTutor = $_POST['telefoneTutor'];
 $emailTutor = $_POST['emailTutor'];
@@ -35,7 +34,7 @@ if (empty($idTutor)) {
 
     if ($resultTutores) {
         // Se os dados foram inseridos com sucesso, redireciona para a página lista-tutores.php
-        echo header("Location: login.php?sucess=1");
+        header("Location: login.php?sucess=1");
     } else {
         echo "Erro ao cadastrar. Tente novamente mais tarde.";
     }
@@ -59,8 +58,9 @@ if (empty($idTutor)) {
 
     if ($resultTutores) {
         // Se os dados foram atualizados com sucesso, redireciona para a página lista-tutores.php
-        echo header("Location: lista-tutores.php?sucess=1");
+        header("Location: lista-tutores.php?sucess=1");
     } else {
-        echo "Erro ao atualizar. Tente novamente mais tarde.";
+        // Se houve um erro ao atualizar, exibe uma mensagem de erro
+        header("Location: index.php?erro=1");
     }
 }

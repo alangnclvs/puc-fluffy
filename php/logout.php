@@ -1,3 +1,9 @@
+<!-- 
+ATIVIDADE SOMATIVA 2
+ALAN GONÇALVES
+GRUPO 79 
+-->
+
 <?php
 
 session_start();
@@ -6,4 +12,5 @@ session_start();
 unset($_SESSION['id']);
 unset($_SESSION['nome']);
 
+// Redireciona para a página inicial (index.php)
 header("Location: index.php");

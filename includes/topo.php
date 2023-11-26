@@ -4,6 +4,7 @@ ALAN GONÇALVES
 GRUPO 79 
 -->
 
+<!--  Início de todas as páginas -->
 <!DOCTYPE html>
 <html lang="en">
 

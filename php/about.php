@@ -4,15 +4,13 @@ ALAN GONÇALVES
 GRUPO 79 
 -->
 
+<!--  Página sobre a Fluffy -->
 <?php include "../includes/topo.php"; ?>
-
 
 <body>
 
     <?php include "../includes/menulogado.php"; ?>
 
-    <!-- Layout -->
-    <!-- Um container com duas colunas, uma com um texto e outra com uma imagem -->
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -35,7 +33,7 @@ GRUPO 79
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="../img/about.png" alt="Ilustração de um veterinário com um cachorro">
+                <img src="../img/about.png" alt="Ilustração de uma veterinária com um cachorro">
             </div>
         </div>
     </div>

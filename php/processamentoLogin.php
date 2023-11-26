@@ -1,3 +1,9 @@
+<!-- 
+ATIVIDADE SOMATIVA 2
+ALAN GONÇALVES
+GRUPO 79 
+-->
+
 <?php
 // Recebe os dados do formulário de login via POST e armazena nas variáveis
 $login = $_POST['email'];
@@ -49,29 +55,10 @@ if ($quantidadeRegistrosTutores > 0 || $quantidadeRegistrosVets > 0) {
             $_SESSION['nome'] = $rowVets['nomeVet'];
             header("Location: inicio.php");
         } else {
-            // A senha está incorreta!
+            // Senha incorreta!
             header("Location: index.php?erro=1");
         }
     }
 } else {
     header("Location: index.php?erro=1");
 }
-
-
-// até aqui funciona perfeitamente
-
-
-
-
-// AQUI ONDE PAREI O CRUD DO TUTOR E DO VETERINARIO ESTÃO FUNCIONANDO PERFEITAMENTE
-// ------------AGORA PRECISO FAZER O LOGIN DO TUTOR E DO VETERINARIO E AUTENTICAR NAS PAGINAS RESTRITAS
-// ------------MAS ANTES PRECISO ENVIAR OS DADOS DO FORMULARIO VIA POST
-// ------------O LOGIN SERA FEITO VIA POST E A AUTENTICAÇÃO SERA FEITA VIA SESSION
-// ------------A AUTENTICAÇÃO SERA FEITA NO ARQUIVO php/autentica.php
-// ------------lOGIN SERÁ NUMA PÁGINA SEPARADA php/login-tutor.php E php/login-veterinario.php
-
-// ------------FALTA ISSO DE AUTENTICAR O LOGIN E FAZER A PAGINA RESTRITA
-// E FAZER VALIDAÇÃO NO FORMULARIO DE CADASTRO DE TUTOR E VETERINARIO
-// E FAZER VALIDAÇÃO NO FORMULARIO DE LOGIN DE TUTOR E VETERINARIO
-
-// APOS ISSO POSSO GRAVAR O VÍDEO (DOMINGO) E ENVIAR O LINK PARA O PROFESSOR
