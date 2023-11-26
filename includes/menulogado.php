@@ -24,7 +24,7 @@ GRUPO 79
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Área do usuário
+                        Área do Usuário
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="lista-tutores.php">Lista de Tutores(a)</a></li>
