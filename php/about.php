@@ -5,6 +5,8 @@ GRUPO 79
 -->
 
 <!--  Página sobre a Fluffy -->
+<?php require "../includes/autentica.php"; ?>
+
 <?php include "../includes/topo.php"; ?>
 
 <body>
