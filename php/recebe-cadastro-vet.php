@@ -14,11 +14,12 @@ $nomeVet = $_POST['nomeVet'];
 $crmvVet = $_POST['crmvVet'];
 $telefoneVet = $_POST['telefoneVet'];
 $emailVet = $_POST['emailVet'];
+$senhaVet = $_POST['senhaVet'];
 
 if (empty($idVet)) {
 
-    $sqlVets = "INSERT INTO veterinarios (nomeVet, crmvVet, telefoneVet, emailVet) 
-                VALUES ('$nomeVet', '$crmvVet', '$telefoneVet', '$emailVet')";
+    $sqlVets = "INSERT INTO veterinarios (nomeVet, crmvVet, telefoneVet, emailVet, senhaVet) 
+                VALUES ('$nomeVet', '$crmvVet', '$telefoneVet', '$emailVet', '$senhaVet')";
 
     $resultVets = mysqli_query($connection, $sqlVets);
 
@@ -32,7 +33,8 @@ if (empty($idVet)) {
                 nomeVet = '$nomeVet', 
                 crmvVet = '$crmvVet', 
                 telefoneVet = '$telefoneVet', 
-                emailVet = '$emailVet' 
+                emailVet = '$emailVet',
+                senhaVet = '$senhaVet'
                 WHERE idVet = $idVet";
 
     $resultVets = mysqli_query($connection, $sqlVets);

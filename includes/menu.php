@@ -29,8 +29,9 @@ GRUPO 79
                         <li><a class="dropdown-item" href="cadastro-tutor.php">Tutor(a)</a></li>
                         <li><a class="dropdown-item" href="cadastro-veterinario.php">Veterinário(a)</a></li>
                     </ul>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
                 </li>
             </ul>

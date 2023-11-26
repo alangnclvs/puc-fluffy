@@ -17,6 +17,16 @@ GRUPO 79
         <div class="row">
             <div class="col-md-6">
                 <div class="text-container">
+
+                    <?php
+                    // Mensagem de erro caso o usuário ou senha estejam incorretos
+                    if (isset($_GET['erro'])) {
+                        echo '<div class="alert alert-danger" role="alert">
+                        Usuário ou senha inválidos! Tente novamente ou cadastre-se.
+                      </div>';
+                    }
+                    ?>
+
                     <h1 class="titulo-principal">Gestão para Clínicas Veterinárias</h1>
                     <p class="texto-principal">Na Fluffy, registrar veterinários e tutores é simples e eficiente.
                         Organize informações de tutores e veterinários de forma intuitiva, simplificando a gestão da sua
