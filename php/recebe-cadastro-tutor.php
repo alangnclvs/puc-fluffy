@@ -15,6 +15,7 @@ $cpfTutor = $_POST['cpfTutor'];
 $telefoneTutor = $_POST['telefoneTutor'];
 $emailTutor = $_POST['emailTutor'];
 $senhaTutor = $_POST['senhaTutor'];
+$senhaTutor = password_hash($_POST['senhaTutor'], PASSWORD_DEFAULT); // criptografa a senha     
 $nomePet = $_POST['nomePet'];
 $especiePet = $_POST['especiePet'];
 $racaPet = $_POST['racaPet'];

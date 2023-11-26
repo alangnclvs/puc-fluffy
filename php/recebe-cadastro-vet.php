@@ -15,6 +15,7 @@ $crmvVet = $_POST['crmvVet'];
 $telefoneVet = $_POST['telefoneVet'];
 $emailVet = $_POST['emailVet'];
 $senhaVet = $_POST['senhaVet'];
+$senhaVet = password_hash($_POST['senhaVet'], PASSWORD_DEFAULT); // criptografa a senha
 
 if (empty($idVet)) {
 
