@@ -93,7 +93,7 @@ if (isset($_GET['idTutor'])) {
 
                         <div class="mb-3">
                             <label for="senhaTutor" class="form-label">Senha</label>
-                            <input type="password" class="form-control" name="senhaTutor" id="senhaTutor" value="<?php echo $senhaTutor; ?>" required />
+                            <input type="password" class="form-control" name="senhaTutor" id="senhaTutor" placeholder="Digite a sua senha" value="" required />
                         </div>
 
                         <div class="mb-3">
