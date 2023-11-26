@@ -26,7 +26,7 @@ GRUPO 79
                     ?>
 
                     <h1 class="titulo-principal">Bem-vindo ao Fluffy!</h1>
-                    <p class="texto-principal">Faça o login abaixo para acessar sua conta de tutor e aproveitar todas as funcionalidades do Fluffy.
+                    <p class="texto-principal">Faça o login abaixo para acessar sua conta e aproveitar todas as funcionalidades da Fluffy.
                     </p>
 
                     <form action="processamentoLogin.php" method="POST">
