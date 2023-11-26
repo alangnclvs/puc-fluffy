@@ -15,6 +15,16 @@ GRUPO 79
         <div class="row">
             <div class="col-md-6">
                 <div class="text-container">
+                    <?php
+                    // Mensagem de sucesso ao cadastrar
+                    if (isset($_GET['sucess'])) {
+                        echo '<div class="alert alert-success" role="alert">
+                                Cadastro realizado com sucesso!
+                              </div>';
+                    }
+
+                    ?>
+
                     <h1 class="titulo-principal">Bem-vindo ao Fluffy!</h1>
                     <p class="texto-principal">Faça o login abaixo para acessar sua conta de tutor e aproveitar todas as funcionalidades do Fluffy.
                     </p>

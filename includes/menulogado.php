@@ -23,15 +23,6 @@ GRUPO 79
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Cadastre-se
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="cadastro-tutor.php">Tutor(a)</a></li>
-                        <li><a class="dropdown-item" href="cadastro-veterinario.php">Veterinário(a)</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Área do usuário
                     </a>
                     <ul class="dropdown-menu">
@@ -40,7 +31,7 @@ GRUPO 79
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Login.php">Login</a>
+                    <a class="nav-link" href="logout.php">Logout</a>
                 </li>
                 </li>
             </ul>

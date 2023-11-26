@@ -4,13 +4,14 @@ ALAN GONÇALVES
 GRUPO 79
 -->
 
-<?php require "../includes/autentica.php"; ?>
+<?php // require "../includes/autentica.php"; 
+?>
 
 <?php include "../includes/topo.php"; ?>
 
 <body>
 
-    <?php include "../includes/menu.php"; ?>
+    <?php include "../includes/menulogado.php"; ?>
 
     <!-- Layout -->
     <!-- Um container com duas colunas, uma com um texto e outra com uma imagem -->
@@ -18,6 +19,16 @@ GRUPO 79
         <div class="row">
             <div class="col-md-6">
                 <div class="text-container">
+                    <?php
+                    // Mensagem de sucesso ao atualizar
+                    if (isset($_GET['sucess'])) {
+                        echo '<div class="alert alert-success" role="alert">
+                                Dados atualizados com sucesso!
+                              </div>';
+                    }
+
+                    ?>
+
                     <h1 class="titulo-principal">Lista de Veterinários Fluffy</h1>
                     <p class="texto-principal">Confira abaixo a lista de todos os tutores cadastrados no Fluffy.
                         Aqui você encontrará informações sobre cada tutor(a) e seu pet. Caso queira editar ou excluir algum cadastro, clique nos links correspondentes.

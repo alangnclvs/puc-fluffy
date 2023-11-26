@@ -34,7 +34,7 @@ if (empty($idTutor)) {
 
     if ($resultTutores) {
         // Se os dados foram inseridos com sucesso, redireciona para a página lista-tutores.php
-        echo header("Location: lista-tutores.php");
+        echo header("Location: login.php?sucess=1");
     } else {
         echo "Erro ao cadastrar. Tente novamente mais tarde.";
     }
@@ -58,7 +58,7 @@ if (empty($idTutor)) {
 
     if ($resultTutores) {
         // Se os dados foram atualizados com sucesso, redireciona para a página lista-tutores.php
-        echo header("Location: lista-tutores.php");
+        echo header("Location: lista-tutores.php?sucess=1");
     } else {
         echo "Erro ao atualizar. Tente novamente mais tarde.";
     }

@@ -24,7 +24,7 @@ if (empty($idVet)) {
     $resultVets = mysqli_query($connection, $sqlVets);
 
     if ($resultVets) {
-        echo header("Location: lista-vets.php");
+        echo header("Location: login.php?sucess=1");
     } else {
         echo "Erro ao cadastrar. Tente novamente mais tarde.";
     }
@@ -40,7 +40,7 @@ if (empty($idVet)) {
     $resultVets = mysqli_query($connection, $sqlVets);
 
     if ($resultVets) {
-        echo header("Location: lista-vets.php");
+        echo header("Location: lista-vets.php?sucess=1");
     } else {
         echo "Erro ao atualizar. Tente novamente mais tarde.";
     }

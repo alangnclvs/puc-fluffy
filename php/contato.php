@@ -8,7 +8,7 @@ GRUPO 79
 
 <body>
 
-    <?php include "../includes/menu.php"; ?>
+    <?php include "../includes/menulogado.php"; ?>
 
     <!-- Layout -->
     <!-- Um container com duas colunas, uma com um texto e outra com uma imagem -->

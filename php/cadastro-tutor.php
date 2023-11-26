@@ -57,7 +57,7 @@ if (isset($_GET['idTutor'])) {
 
 <body>
 
-    <?php include "../includes/menu.php"; ?>
+    <?php include "../includes/menudeslogado.php"; ?>
 
     <div class="container">
         <div class="row">
