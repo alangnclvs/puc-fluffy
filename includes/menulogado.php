@@ -27,8 +27,8 @@ GRUPO 79
                         Área do Usuário
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="lista-tutores.php">Lista de Tutores(a)</a></li>
-                        <li><a class="dropdown-item" href="lista-vets.php">Lista de veterinários(a)</a></li>
+                        <li><a class="dropdown-item" href="lista-tutores.php">Lista de Tutores(as)</a></li>
+                        <li><a class="dropdown-item" href="lista-vets.php">Lista de Veterinários(as)</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
