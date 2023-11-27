@@ -31,7 +31,7 @@ GRUPO 79
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="../img/Playful cat-cuate.png" alt="Ilustração de gato brincando">
+                <img src="../img/cat.png" alt="Ilustração de gato brincando">
             </div>
         </div>
     </div>
