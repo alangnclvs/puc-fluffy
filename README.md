@@ -3,6 +3,14 @@
 ## Overview
 Fluffy is a web-based application designed to streamline the management of tutors, their pets, and veterinarians. It provides a user-friendly interface for performing CRUD (Create, Read, Update, Delete) operations.
 
+| ![Image 1](https://github.com/alangnclvs/puc-fluffy/assets/19418344/d6d5a576-c2db-472c-bb53-439f256f1eea) | ![Image 2](https://github.com/alangnclvs/puc-fluffy/assets/19418344/ae443bd0-c325-49d7-b6fe-48234c6800b5) |
+| --- | --- |
+
+
+
+
+
+
 ## Features
 - **Tutor and Pet Management**: Manage tutor and their pet's information effectively.
 - **Veterinarian Management**: Keep track of veterinarian details.
